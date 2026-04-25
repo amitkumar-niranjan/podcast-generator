@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Amit Kumar Tech Lead"
+Description: "A Github Action to Generate feed from Podcast Yaml file and commit to the repository"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "github-branch"
+  color: "blue"
+inputs:
+  EMAIL:
+    description: "The email address for the Committer"
+    required: true
+    default: ${{ github.actor }}@localhost
+  NAME:
+    description: "The name of the Committer"
+    required: true
+    default: ${{ github.actor }}
