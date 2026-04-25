@@ -87,6 +87,18 @@ jobs:
 3. `actions/checkout` downloads your repository.
 4. This action runs inside Docker using [Dockerfile](Dockerfile).
 5. [entrypoint.sh](entrypoint.sh) runs [feed.py](feed.py), commits changes if needed, and pushes to the current branch.
+```
+name: Generate Podcase Feeds
+on: [push]
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Run Feed Generator
+        uses: amitkumar-niranjan/podcast-generator@main
+```
 
 ## Repository Files Used
 
