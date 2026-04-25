@@ -1,4 +1,4 @@
-name: "Podcast Generator."
+name: "Podcast Generator using Docker and bash with python code."
 author: "Amit Kumar Tech Lead."
 Description: "A GitHub Action to generate a feed from a description: Podcast YAML file and commit to the repository.description: "
 runs:
